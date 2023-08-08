@@ -11,7 +11,7 @@ const App = () => {
   const [darkTheme, setDarkTheme] = useState(true);
   return (
     <div className={darkTheme ? "dark" : ""}>
-      <div className="bg bg-gray-200 dark:bg-neutral-700 min-h-screen">
+      <div className="bg bg-gray-200 dark:bg-zinc-800 min-h-screen">
         <Router>
           <Routes>
             <Route path="/" element={<Home />}/>

@@ -1,18 +1,32 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import MainNavigation from "./MainNavigation";
 import SearchResults from "./SearchResults";
 import SubNavigation from "./SubNavigation";
+import Footer from "./Footer";
+
+import useSearch from "../hooks/useSearch";
+
+import mocks from "../mocks.js";
 
 const SearchPage = () => {
+  const {search} = useLocation();
+  const searchTerm = search?.split('?')[1];
+  console.log(searchTerm);
+  // const data = mocks
+  // console.log(data);
+  const {data} = useSearch(searchTerm)
+
+  
   return (
     <>
       <div className="border-b border-neutral-500 pb-4">
         <MainNavigation />
         <SubNavigation />
       </div>
-      <div>{true && <SearchResults />}</div>
+      <div>{data && <SearchResults data={data}/>}</div>
+      <Footer />
     </>
   );
 };
