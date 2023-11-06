@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BsFillMoonFill, BsFillSunFill, BsPersonCircle } from "react-icons/bs";
 import { RiComputerFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import SearchInput from "./SearchInput";
 import ProjectSection from "./ProjectSection";
+import SearchInput from "./SearchInput";
 const Home = () => {
-  const [theme,setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "system")
-  const element = document.documentElement
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "system"
+  );
+  const element = document.documentElement;
 
-  const darkQuery = window.matchMedia("(prefers-color-scheme:dark)")
+  const darkQuery = window.matchMedia("(prefers-color-scheme:dark)");
 
   const options = [
     {
@@ -26,38 +28,42 @@ const Home = () => {
   ];
 
   function onWindowMatch() {
-    if(localStorage.theme === 'dark' || (!("theme" in localStorage) && darkQuery.matches)) element.classList.add('dark');
-    else element.classList.remove('dark');
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) && darkQuery.matches)
+    )
+      element.classList.add("dark");
+    else element.classList.remove("dark");
   }
 
-  onWindowMatch()
+  onWindowMatch();
 
-  useEffect(()=>{
+  useEffect(() => {
     switch (theme) {
-      case 'dark':
-        element.classList.add('dark')
-        localStorage.setItem('theme', 'dark')
+      case "dark":
+        element.classList.add("dark");
+        localStorage.setItem("theme", "dark");
         break;
-      case 'light':
-      element.classList.remove('dark')
-      localStorage.setItem('theme','light')
-      break;
-      case 'system':
+      case "light":
+        element.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+        break;
+      case "system":
 
       default:
-        localStorage.removeItem('theme')
-        onWindowMatch()
+        localStorage.removeItem("theme");
+        onWindowMatch();
         break;
     }
-  },[theme])
+  }, [theme]);
 
-  darkQuery.addEventListener("change",(e) => {
-    if(!("theme" in localStorage)){
-      if(e.matches){
-        element.classList.add('dark')
-      }else element.classList.remove('dark')
+  darkQuery.addEventListener("change", (e) => {
+    if (!("theme" in localStorage)) {
+      if (e.matches) {
+        element.classList.add("dark");
+      } else element.classList.remove("dark");
     }
-  })
+  });
   return (
     <>
       <nav className="flex justify-between px-10 py-2 text-neutral-800 dark:text-neutral-200">
@@ -97,9 +103,12 @@ const Home = () => {
       <div className="mx-14 flex items-center justify-end">
         <span className="duration-100 dark:text-gray-100 dark:bg-slate-700 bg-gray-100 rounded flex items-center justify-center p-3 gap-3">
           {options.map((item) => (
-            <button className={`tex-xl rounded-full m-1 ${theme === item.text && "text-sky-600"}`}
-            onClick={()=>setTheme(item.text)}
-            key={item.text}
+            <button
+              className={`tex-xl rounded-full m-1 ${
+                theme === item.text && "text-sky-600"
+              }`}
+              onClick={() => setTheme(item.text)}
+              key={item.text}
             >
               <p>{item.icon}</p>
             </button>
@@ -123,7 +132,9 @@ const Home = () => {
         </div>
       </div>
 
-      <ProjectSection />
+      <div className="flex justify-center">
+        <ProjectSection />
+      </div>
     </>
   );
 };
