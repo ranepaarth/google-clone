@@ -3,6 +3,7 @@ import { BsFillMoonFill, BsFillSunFill, BsPersonCircle } from "react-icons/bs";
 import { RiComputerFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import SearchInput from "./SearchInput";
+import ProjectSection from "./ProjectSection";
 const Home = () => {
   const [theme,setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "system")
   const element = document.documentElement
@@ -58,8 +59,8 @@ const Home = () => {
     }
   })
   return (
-    <nav className="">
-      <div className="flex justify-between px-10 py-2 text-neutral-800 dark:text-neutral-200">
+    <>
+      <nav className="flex justify-between px-10 py-2 text-neutral-800 dark:text-neutral-200">
         <div className="flex gap-4 items-center">
           <Link
             to="/about"
@@ -91,7 +92,7 @@ const Home = () => {
             <BsPersonCircle />
           </span>
         </div>
-      </div>
+      </nav>
 
       <div className="mx-14 flex items-center justify-end">
         <span className="duration-100 dark:text-gray-100 dark:bg-slate-700 bg-gray-100 rounded flex items-center justify-center p-3 gap-3">
@@ -106,7 +107,7 @@ const Home = () => {
         </span>
       </div>
 
-      <div className="h-full mt-52">
+      <div className="flex flex-col items-center justify-center mt-20">
         <div className="flex justify-center items-center">
           <div className="flex  items-center gap-1 text-8xl font-serif dark:text-neutral-100">
             <p className="text-blue-600 dark:text-neutral-100">G</p>
@@ -121,7 +122,9 @@ const Home = () => {
           <SearchInput />
         </div>
       </div>
-    </nav>
+
+      <ProjectSection />
+    </>
   );
 };
 
