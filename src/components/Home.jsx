@@ -45,9 +45,18 @@ const Home = () => {
 
       default:
         localStorage.removeItem('theme')
+        onWindowMatch()
         break;
     }
   },[theme])
+
+  darkQuery.addEventListener("change",(e) => {
+    if(!("theme" in localStorage)){
+      if(e.matches){
+        element.classList.add('dark')
+      }else element.classList.remove('dark')
+    }
+  })
   return (
     <nav className="">
       <div className="flex justify-between px-10 py-2 text-neutral-800 dark:text-neutral-200">
@@ -89,8 +98,9 @@ const Home = () => {
           {options.map((item) => (
             <button className={`tex-xl rounded-full m-1 ${theme === item.text && "text-sky-600"}`}
             onClick={()=>setTheme(item.text)}
+            key={item.text}
             >
-              {item.icon}
+              <p>{item.icon}</p>
             </button>
           ))}
         </span>
