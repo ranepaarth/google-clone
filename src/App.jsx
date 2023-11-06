@@ -8,10 +8,11 @@ import Home from './components/Home'
 import SearchPage from "./components/SearchPage";
 
 const App = () => {
-  const [darkTheme, setDarkTheme] = useState(true);
+  // const [darkTheme, setDarkTheme] = useState(true);
   return (
-    <div className={darkTheme ? "dark" : ""}>
-      <div className="bg bg-gray-200 dark:bg-zinc-800 min-h-screen">
+    // <div className={darkTheme ? "dark" : ""}>
+    <div>
+      <div className="bg bg-neutral-50 dark:bg-zinc-800 min-h-screen">
         <Router>
           <Routes>
             <Route path="/" element={<Home />}/>
