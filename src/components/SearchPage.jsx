@@ -1,10 +1,10 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
+import Footer from "./Footer";
 import MainNavigation from "./MainNavigation";
 import SearchResults from "./SearchResults";
 import SubNavigation from "./SubNavigation";
-import Footer from "./Footer";
 
 import useSearch from "../hooks/useSearch";
 
@@ -26,10 +26,7 @@ const SearchPage = () => {
         <MainNavigation />
         <SubNavigation />
       </div>
-      <div>{data && <SearchResults data={data}/>}</div>
-      {/* <div>
-        <SearchResults />
-      </div> */}
+      <div>{data && <SearchResults data={data} />}</div>
       <Footer />
     </>
   );

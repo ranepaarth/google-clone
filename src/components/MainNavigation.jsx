@@ -7,8 +7,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const MainNavigation = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const searchQuery = useLocation();
-  console.log(location.search.split("?")[1]);
 
   const navigate = useNavigate();
   const handleSearch = (e) => {
