@@ -7,7 +7,7 @@ const VITE_API_KEY = import.meta.env.VITE_SEARCH_KEY;
 
 const VITE_SEARCH_ENGINE_KEY = import.meta.env.VITE_SEARCH_ENGINE_KEY;
 
-const useSearch = (searchTerm) => {
+const useSearch = (searchTerm,startIndex) => {
   const [data, setData] = useState(null);
   //   const [isLoading, setIsLoading] = useState(false);
 
@@ -16,14 +16,14 @@ const useSearch = (searchTerm) => {
       //   setIsLoading(true);
 
       const response = await axios.get(
-        `${BASE_URL}?key=${VITE_API_KEY}&cx=${VITE_SEARCH_ENGINE_KEY}&q=${searchTerm}`
+        `${BASE_URL}?key=${VITE_API_KEY}&cx=${VITE_SEARCH_ENGINE_KEY}&q=${searchTerm}&start=${startIndex}`
       );
       setData(response?.data);
       // console.log(data)
     };
     fetchData();
     // setIsLoading(false);
-  }, [searchTerm]);
+  }, [searchTerm,startIndex]);
   console.log(data);
   return { data };
 };
