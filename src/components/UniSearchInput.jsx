@@ -29,7 +29,7 @@ const UniSearchInput = ({mainDivClassName,formInputClass}) => {
             value={searchTerm}
             ref={inputRef}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className={"text-neutral-700 outline-none border-none ml-4 placeholder:text-neutral-600 caret-black " + formInputClass }
+            className={"bg-transparent text-neutral-700 outline-none border-none ml-4 placeholder:text-neutral-600 caret-black " + formInputClass }
             placeholder="Search Google"
           />
         </form>
