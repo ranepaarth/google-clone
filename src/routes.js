@@ -1,15 +1,15 @@
-export {default as HomePage} from './pages/HomePage'
-export {default as SearchPage} from './pages/SearchPage'
-export {default as Logo} from './components/Home/Logo'
-export {default as NavItem} from './components/Home/NavItem'
-export {default as ThemeToggler} from './components/Home/ThemeToggler'
-export {default as HomePageNav} from './components/Home/HomePageNav'
-export {default as ProjectSection} from './components/Home/ProjectSection'
-export {default as UniSearchInput} from './components/UniSearchInput'
-export {default as Footer} from './components/SearchPage/Footer'
-export {default as PaginationButtons} from './components/SearchPage/PaginationButtons'
-export {default as SearchPageHeader} from './components/SearchPage/SearchPageHeader'
-export {default as SearchPageNav} from './components/SearchPage/SearchPageNav'
-export {default as SearchResults} from './components/SearchPage/SearchResultSection/SearchResults'
-export {default as SearchResultsItem} from './components/SearchPage/SearchResultSection/SearchResultsItem'
-export {default as useSearch} from './hooks/useSearch'
+export { default as HomePageNav } from "./components/HomePage/HomePageNav";
+export { default as Logo } from "./components/shared/Logo";
+export { default as NavItem } from "./components/HomePage/HomePageHeader";
+export { default as ProjectSection } from "./components/HomePage/ProjectSection";
+export { default as ThemeToggler } from "./components/HomePage/ThemeToggler";
+export { default as Footer } from "./components/SearchPage/Footer";
+export { default as PaginationButtons } from "./components/SearchPage/PaginationButtons";
+export { default as SearchPageHeader } from "./components/SearchPage/SearchPageHeader";
+export { default as SearchPageNav } from "./components/SearchPage/SearchPageNav";
+export { default as SearchResults } from "./components/SearchPage/SearchResultSection/SearchResults";
+export { default as SearchResultsItem } from "./components/SearchPage/SearchResultSection/SearchResultsItem";
+export { default as UniSearchInput } from "./components/shared/UniSearchInput";
+export { default as useSearch } from "./hooks/useSearch";
+export { default as HomePage } from "./pages/HomePage";
+export { default as SearchPage } from "./pages/SearchPage";
