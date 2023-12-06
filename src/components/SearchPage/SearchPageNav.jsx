@@ -12,16 +12,7 @@ const SearchPageNav = () => {
           <NavLink to={`${pathname}${search}`}>All</NavLink>
         </span>
         <span className="mt-3 px-4 py-2 border border-neutral-400 rounded-full dark:hover:bg-neutral-600 hover:bg-neutral-300">
-          <Link to="/images">Images</Link>
-        </span>
-        <span className="mt-3 px-4 py-2 border border-neutral-400 rounded-full dark:hover:bg-neutral-600 hover:bg-neutral-300">
-          <Link to="/news">News</Link>
-        </span>
-        <span className="mt-3 px-4 py-2 border border-neutral-400 rounded-full dark:hover:bg-neutral-600 hover:bg-neutral-300">
-          <Link to="/maps">Maps</Link>
-        </span>
-        <span className="mt-3 px-4 py-2 border border-neutral-400 rounded-full dark:hover:bg-neutral-600 hover:bg-neutral-300">
-          <Link to="/shopping">Shopping</Link>
+          <Link>Images</Link>
         </span>
       </div>
     </div>
