@@ -1,6 +1,5 @@
 import React from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 // import {useRouter} from 'react-router-dom'
 

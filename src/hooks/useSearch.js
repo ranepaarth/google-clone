@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const BASE_URL = "https://customsearch.googleapis.com/customsearch/v1";
 
@@ -7,7 +7,7 @@ const VITE_API_KEY = import.meta.env.VITE_SEARCH_KEY;
 
 const VITE_SEARCH_ENGINE_KEY = import.meta.env.VITE_SEARCH_ENGINE_KEY;
 
-const useSearch = (searchTerm,startIndex) => {
+const useSearch = (searchTerm, startIndex) => {
   const [data, setData] = useState(null);
   //   const [isLoading, setIsLoading] = useState(false);
 
@@ -23,7 +23,7 @@ const useSearch = (searchTerm,startIndex) => {
     };
     fetchData();
     // setIsLoading(false);
-  }, [searchTerm,startIndex]);
+  }, [searchTerm, startIndex]);
   console.log(data);
   return { data };
 };

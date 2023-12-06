@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { BsFillMoonFill, BsFillSunFill, BsPersonCircle } from "react-icons/bs";
 import { RiComputerFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import ProjectSection from "./ProjectSection";
-import SearchInput from "./SearchInput";
+import Logo from "./Home/Logo";
+import ProjectSection from "./Home/ProjectSection";
+import SearchInput from "./Home/SearchInput";
 const Home = () => {
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "system"
@@ -117,19 +118,8 @@ const Home = () => {
       </div>
 
       <div className="flex flex-col items-center justify-center mt-20">
-        <div className="flex justify-center items-center">
-          <div className="flex  items-center gap-1 text-8xl font-serif dark:text-neutral-100">
-            <p className="text-blue-600 dark:text-neutral-100">G</p>
-            <p className="text-red-600 dark:text-neutral-100">o</p>
-            <p className="text-yellow-400 dark:text-neutral-100">o</p>
-            <p className="text-blue-600 dark:text-neutral-100">g</p>
-            <p className="text-green-600 dark:text-neutral-100">l</p>
-            <p className="text-red-600 dark:text-neutral-100">e</p>
-          </div>
-        </div>
-        <div>
-          <SearchInput />
-        </div>
+        <Logo />
+        <SearchInput />
       </div>
 
       <div className="flex justify-center">

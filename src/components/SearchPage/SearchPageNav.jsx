@@ -1,8 +1,8 @@
 import React from "react";
 
 import { Link, NavLink, useLocation } from "react-router-dom";
-const SubNavigation = () => {
-  const {pathname,search} = useLocation()
+const SearchPageNav = () => {
+  const { pathname, search } = useLocation();
   // console.log(pathname+search)
 
   return (
@@ -28,4 +28,4 @@ const SubNavigation = () => {
   );
 };
 
-export default SubNavigation;
+export default SearchPageNav;

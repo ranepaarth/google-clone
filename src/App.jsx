@@ -1,27 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
+import { HomePage, SearchPage } from "./routes";
 
-import Home from './components/Home'
-import SearchPage from "./components/SearchPage";
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+  {
+    path: "search",
+    element: <SearchPage />,
+  },
+]);
 
 const App = () => {
-  // const [darkTheme, setDarkTheme] = useState(true);
-  return (
-    // <div className={darkTheme ? "dark" : ""}>
-    <div>
-      <div className="bg bg-neutral-50 dark:bg-zinc-800 min-h-screen">
-        <Router>
-          <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="/search" element={<SearchPage />}/>
-          </Routes>
-        </Router>
-      </div>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
