@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 
-import useSearch from "../hooks/useSearch";
-// import mocks from "../mocks.js";
+// import useSearch from "../hooks/useSearch";
+import mocks from "../mocks.js";
 import {
   Footer,
   PaginationButtons,
@@ -16,8 +16,8 @@ const SearchPage = () => {
   const [startIndex, setStartIndex] = useState(1);
   const searchTerm = search?.split("?").filter((item) => item !== "")[0];
   console.log(searchTerm);
-  // const data = mocks;
-  const { data } = useSearch(searchTerm, startIndex);
+  const data = mocks;
+  // const { data } = useSearch(searchTerm, startIndex);
   // console.log(data);
 
   return (
