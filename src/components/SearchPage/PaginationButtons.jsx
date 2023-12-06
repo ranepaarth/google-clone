@@ -14,7 +14,7 @@ const PaginationButtons = ({ setStartIndex, startIndex }) => {
   };
 
   return (
-    <div className="flex items-center justify-center gap-4 select-none">
+    <div className="flex items-center justify-center gap-4 select-none my-5">
       <span
         className={`flex flex-col items-center cursor-pointer  dark:text-neutral-50 text-blue-600  hover:underline  dark:hover:text-blue-500 ${
           startIndex === 1 ? "invisible" : "visible"
