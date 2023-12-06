@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Logo, UniSearchInput } from "../../routes";
 
-const SearchPageInput = () => {
+const SearchPageHeader = () => {
   return (
     <div>
       <div className="pt-7 pb-2 pl-4 flex gap-8 items-center md:pl-10">
@@ -21,4 +21,4 @@ const SearchPageInput = () => {
   );
 };
 
-export default SearchPageInput;
+export default SearchPageHeader;

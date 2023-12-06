@@ -6,7 +6,7 @@ import mocks from "../mocks.js";
 import {
   Footer,
   PaginationButtons,
-  SearchPageInput,
+  SearchPageHeader,
   SearchPageNav,
   SearchResults,
 } from "../routes.js";
@@ -23,7 +23,7 @@ const SearchPage = () => {
   return (
     <>
       <div className="border-b border-neutral-300 dark:border-neutral-500 pb-4">
-        <SearchPageInput />
+        <SearchPageHeader />
         <SearchPageNav />
       </div>
       <div>{data && <SearchResults data={data} />}</div>
