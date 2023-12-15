@@ -3,7 +3,7 @@ export const projects = [
     projectTitle: "TechieTube",
     projectLogo:
       "https://res.cloudinary.com/datwcn7ap/image/upload/v1701787364/google-clone/tzl1x4uigemwynwmoxra.svg",
-    projectLink: "#",
+    projectLink: "https://github.com/ranepaarth/youtube-clone",
     target: "_blank",
   },
   {
@@ -11,6 +11,13 @@ export const projects = [
     projectLogo:
       "https://res.cloudinary.com/datwcn7ap/image/upload/v1701787364/google-clone/cnncbejad2fdkcyd3xoq.svg",
     projectLink: "https://techiekart.vercel.app/",
+    target: "_blank",
+  },
+  {
+    projectTitle: "Fit-Fusion",
+    projectLogo:
+      "https://res.cloudinary.com/datwcn7ap/image/upload/v1702620241/google-clone/jwzh6nvjbrtfgu8acizp.svg",
+    projectLink: "https://fit-fusion-frontend.vercel.app/",
     target: "_blank",
   },
   {
