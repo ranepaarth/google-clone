@@ -15,6 +15,7 @@ const ProjectSection = () => {
                   src={project.projectLogo}
                   alt={project.projectTitle}
                   rel="icon"
+                  className="w-8"
                 />
               </figure>
               <p className="dark:text-neutral-100 text-neutral-800">

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 const SearchPageNav = () => {
   const { pathname, search } = useLocation();
   // console.log(pathname+search)
@@ -11,8 +11,8 @@ const SearchPageNav = () => {
         <span className="mt-3 px-4 py-2 border border-neutral-400 rounded-full dark:hover:bg-neutral-600 hover:bg-neutral-300">
           <NavLink to={`${pathname}${search}`}>All</NavLink>
         </span>
-        <span className="mt-3 px-4 py-2 border border-neutral-400 rounded-full dark:hover:bg-neutral-600 hover:bg-neutral-300">
-          <Link>Images</Link>
+        <span className="mt-3 px-4 py-2 border border-neutral-400 rounded-full dark:hover:bg-neutral-600 hover:bg-neutral-300 invisible">
+          <NavLink to=''>Images</NavLink>
         </span>
       </div>
     </div>

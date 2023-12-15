@@ -24,7 +24,7 @@ const useSearch = (searchTerm, startIndex) => {
     fetchData();
     // setIsLoading(false);
   }, [searchTerm, startIndex]);
-  console.log(data);
+  // console.log(data);
   return { data };
 };
 

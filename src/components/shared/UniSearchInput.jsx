@@ -30,7 +30,7 @@ const UniSearchInput = ({ mainDivClassName, formInputClass }) => {
         <form onSubmit={handleSearch}>
           <input
             type="text"
-            value={searchTerm}
+            value={searchTerm || getSearchTerm}
             ref={inputRef}
             onChange={(e) => setSearchTerm(e.target.value)}
             className={`bg-transparent dark:text-neutral-100 font-medium outline-none border-none ml-4 text-neutral-800 dark:placeholder:text-neutral-100 dark:caret-white caret-black ${formInputClass}`}
