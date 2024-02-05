@@ -22,7 +22,7 @@ const SearchPage = () => {
 
   return (
     <>
-      <div className="border-b border-neutral-300 dark:border-neutral-500 pb-4">
+      <div className="border-b border-neutral-300 dark:border-neutral-500 px-5 pb-4">
         <SearchPageHeader />
         <SearchPageNav />
       </div>

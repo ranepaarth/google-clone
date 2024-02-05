@@ -12,8 +12,8 @@ const SearchPageHeader = () => {
         </Link>
         <div className="flex items-center justify-center">
           <UniSearchInput
-            mainDivClassName={" max-sm:w-[310px] max-md:w-[410px] md:w-[550px]"}
-            formInputClass={"max-sm:w-[190px] max-md:w-[290px] md:w-[430px]"}
+            mainDivClassName={"w-9/12 max-w-[550px]"}
+            formInputClass={"max-sm:w-[170px] max-md:w-[300px] md:w-[430px]"}
           />
         </div>
       </div>
