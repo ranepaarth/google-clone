@@ -17,7 +17,7 @@ export const projects = [
     projectTitle: "Fit-Fusion",
     projectLogo:
       "https://res.cloudinary.com/datwcn7ap/image/upload/v1702620241/google-clone/jwzh6nvjbrtfgu8acizp.svg",
-    projectLink: "https://fit-fusion-frontend.vercel.app/",
+    projectLink: "https://fit-fusion-main.vercel.app/",
     target: "_blank",
   },
   {
