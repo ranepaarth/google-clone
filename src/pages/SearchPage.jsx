@@ -7,7 +7,6 @@ import {
   Footer,
   PaginationButtons,
   SearchPageHeader,
-  SearchPageNav,
   SearchResults,
 } from "../routes.js";
 
@@ -24,7 +23,6 @@ const SearchPage = () => {
     <>
       <div className="border-b border-neutral-300 dark:border-neutral-500 px-5 pb-4">
         <SearchPageHeader />
-        <SearchPageNav />
       </div>
       <div>{data && <SearchResults data={data} />}</div>
       <PaginationButtons
