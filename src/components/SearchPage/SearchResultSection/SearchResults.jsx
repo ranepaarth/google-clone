@@ -11,7 +11,7 @@ const SearchResults = ({ data }) => {
       </p>
       {data?.items?.map((data) => {
         return (
-          <div key={data?.link} className="w-full max-w-xl mb-3">
+          <div key={data?.link} className="w-full mb-3">
             <SearchResultsItem data={data} />
           </div>
         );

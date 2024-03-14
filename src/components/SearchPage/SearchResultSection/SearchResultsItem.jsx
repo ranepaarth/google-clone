@@ -1,15 +1,20 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import noThumbnail from "../../../assets/no-thumbnail.jpg";
 
 const SearchResultsItem = ({ data }) => {
+  // console.log({ data });
   return (
-    <div className="bg-neutral-50 dark:bg-neutral-700/20 w-full px-8 pl-[5%] md:pl-[14%] lg:pl-[52] py-3">
+    <div className="bg-neutral-500 md:bg-transparent dark:bg-neutral-700/20 dark:md:bg-transparent w-full md:w-[70%] xl:w-[50%] px-8 pl-[5%] md:pl-[14%] lg:pl-[52] py-3">
       <div>
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 flex justify-center items-center bg-white rounded-full">
             <img
-              src={data?.pagemap?.metatags[0]["og:image"]}
-              alt=""
+              src={noThumbnail}
+              alt={"noThumbnail"}
+              onError={(e) =>
+                (e.target.onerror = null)((e.target.src = noThumbnail))
+              }
               className="w-5 object-cover aspect-square"
             />
           </div>
