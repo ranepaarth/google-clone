@@ -5,7 +5,7 @@ import { projects } from "./projects";
 
 const ProjectSection = () => {
   return (
-    <section className="mt-5 flex flex-wrap justify-center items-center mx-14 cursor-default w-[400px] md:w-[500px]">
+    <section className="mt-5 flex flex-wrap justify-center items-center cursor-default w-[400px] md:w-[500px]">
       {projects.map((project, index) => {
         return (
           <NavLink to={project.projectLink} target={project.target} key={index}>
