@@ -10,7 +10,7 @@ const ProjectSection = () => {
         return (
           <NavLink to={project.projectLink} target={project.target} key={index}>
             <article className="flex flex-col w-[120px] items-center gap-5 dark:hover:bg-neutral-700 hover:bg-neutral-300 py-3 px-5 rounded-lg cursor-pointer">
-              <figure className="p-3 bg-neutral-200 dark:bg-neutral-900 rounded-full">
+              <figure className="p-3 bg-neutral-200 dark:bg-neutral-900 rounded-full w-14 aspect-square flex items-center justify-center">
                 <img
                   src={project.projectLogo}
                   alt={project.projectTitle}

@@ -7,7 +7,7 @@ const ThemeToggler = () => {
 
   return (
     <button
-      className={`p-2 rounded-full border-2 ${
+      className={`p-2 rounded-full border-2 w-8 aspect-square ${
         darkMode
           ? "bg-yellow-200 border-yellow-500"
           : "bg-neutral-400 border-neutral-800"

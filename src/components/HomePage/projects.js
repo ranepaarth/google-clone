@@ -14,6 +14,13 @@ export const projects = [
     target: "_blank",
   },
   {
+    projectTitle: "Notes App",
+    projectLogo:
+      "https://res.cloudinary.com/datwcn7ap/image/upload/v1710398604/google-clone/pudb9nbyobukefymmrvs.svg",
+    projectLink: "https://notes-app-deploy.vercel.app/",
+    target: "_blank",
+  },
+  {
     projectTitle: "Fit-Fusion",
     projectLogo:
       "https://res.cloudinary.com/datwcn7ap/image/upload/v1702620241/google-clone/jwzh6nvjbrtfgu8acizp.svg",
