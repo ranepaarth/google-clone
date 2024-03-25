@@ -14,6 +14,13 @@ export const projects = [
     target: "_blank",
   },
   {
+    projectTitle: "TweetX",
+    projectLogo:
+      "https://res.cloudinary.com/datwcn7ap/image/upload/v1711404982/google-clone/akms50o6fpplgdgk7pjf.png",
+    projectLink: "https://tweetx-deploy.vercel.app/auth/login",
+    target: "_blank",
+  },
+  {
     projectTitle: "Notes App",
     projectLogo:
       "https://res.cloudinary.com/datwcn7ap/image/upload/v1710398604/google-clone/pudb9nbyobukefymmrvs.svg",
